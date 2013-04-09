@@ -12,9 +12,14 @@ class Fplll < Formula
     system "./configure", "--disable-debug", "--disable-dependency-tracking",
                           "--prefix=#{prefix}"
     system "make", "install"
+    system "make", "check"
   end
 
   test do
-    system "make", "check"
+    (testpath/'sample.lll').write <<-EOS.undent
+    [[ 10 11]
+    [11 12]]
+    EOS
+    system "#{bin}/fplll", "sample.lll"
   end
 end

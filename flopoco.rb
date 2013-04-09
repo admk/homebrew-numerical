@@ -24,7 +24,7 @@ class Flopoco < Formula
   end
 
   test do
-    system "#{bin}/flopoco"
+    system "#{bin}/flopoco", "IntConstMult", "16", "12345"
   end
 
   fails_with :clang do
