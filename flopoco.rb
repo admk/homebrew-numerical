@@ -6,7 +6,7 @@ class Flopoco < Formula
   sha1 '1f527957bd63b81019b734ad096517164b46691b'
 
   depends_on 'cmake' => :build
-  depends_on 'boost'
+  depends_on 'boost' => :build
   depends_on 'gsl'
   depends_on 'bison' => :build
   depends_on 'flex' => :build
