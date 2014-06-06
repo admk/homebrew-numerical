@@ -6,7 +6,7 @@ class Rangelab < Formula
   sha1 'a1d5fecd7d3004ff5d9a3aa7090389c31d605329'
   version '1.0'
 
-  depends_on 'mlgmp'
+  depends_on 'mlgmp' => :build
 
   def patches
       DATA
